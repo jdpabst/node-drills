@@ -7,7 +7,9 @@ app.use(bodyParser.json());
 
 
 
-
+app.get('/api/items', function(req, res, next){
+	res.status(200).send(items);
+})
 
 
 app.listen(port, function() {
