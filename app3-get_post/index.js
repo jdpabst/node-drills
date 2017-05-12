@@ -8,11 +8,13 @@ app.use(bodyParser.json());
 
 
 app.get('/api/items', function(req, res, next){
-	res.status(200).send(items);
+	res.status(200).json(items);
 })
 
-app.post('/api/post', function(req, res, next){
-	
+app.post('/api/items', function(req, res, next){
+	let item = req.body;
+	items.push(item);
+	res.status(200).send(item);
 })
 
 
