@@ -11,6 +11,10 @@ app.get('/api/items', function(req, res, next){
 	res.status(200).send(items);
 })
 
+app.post('/api/post', function(req, res, next){
+	
+})
+
 
 app.listen(port, function() {
 	console.log('Listening on port',port);
